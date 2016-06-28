@@ -1,0 +1,45 @@
+;+
+;
+;   Define xstepper common block
+;-
+; scube - input data cube
+; sinfo - strarry (image descriptions)
+; delta - step size
+; scale - 
+; xs/ys - image dimensions
+; rebin - boolean flag
+; zoom  - zoom parameters
+; interpol - boolean flag
+; xstep_str
+; subs - original subscripts
+; current - pointer to subs
+; nimages - number original
+; ssmap - user defined subscripts
+; sspnt - pointer to ssmap
+; sscnt - n_elements(ssmap(defined))
+; pixmap - (2xnimages) - subscript/pixmap window number
+; pixpnt - pointer to pixmap
+; pixcnt - n_elements(pixmap(defined))
+; dispopt - display option
+; backopt - background task option
+; range - lo and high subscripts for data(range) display 
+; over_info - if set, xyout the info on the output device
+; areverse - if set, images sequence display reverses instead of wraps
+; curwind - window number of current display
+; zdata - zoomed (rebinned) data cube
+; mag_fact - magnification factor
+;-
+ 
+common xstepper_blk, $
+	scube, sinfo, delta,  				$
+        scale, xs, ys, rebin, zoom,			$
+	interpol, xstep_str , 	 			$
+	subs, current, nimages,  			$
+	ssrate, pixrate,				$
+	ssmap,  sspnt, sscnt,				$
+        pixmap, pixpnt, pixcnt,				$
+	dispopt, backopt, range, minprog,		$
+	over_info, last_title,				$
+        areverse,					$
+	reference, offsets, dx, dy, shift_fact, curwind, mag_fact
+

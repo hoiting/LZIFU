@@ -1,0 +1,54 @@
+HELP Information on Running SolarSoft under Windows
+
+
+This page assumes that you have already created a SolarSoft installation
+on your Windows PC using the form in the SolarSoft web pages - see the
+URL:
+
+   http://www.lmsal.com/solarsoft/ssw_install_howto.html
+
+
+Although we have attempted to make things as similar as possible, there
+are several differences in between running SolarSoft under Unix and
+Windows. These relate mainly to when and where IDL is configured to a
+particular selection of SolarSoft instruments. Under Unix, most things are
+done before, or as you enter IDL - under Windows, everything is done
+within IDL.
+
+All the files that define the environment variables under Unix should
+work. However, when you enter SSW IDL under Windows you will only have the
+general part of the SolarSoft tree selected (unless you have selected
+particular set of instrument in sswidl.bat). You then need to select the
+instruments you wish to use with setssw_windows.
+
+
+Starting SSW:
+
+SSW should be invoked by executing the sswidl.bat file that is supplied as
+part of your SolarSoft installation under Windows. You can do this by
+double clicking on the sswidl.bat file - you can create a shortcut to this
+file if you want to.
+
+The sswidl.bat file defines a number of things needed to run SolarSoft,
+including specifying the environment variable IDL_STARTUP. Within IDL, you
+should clear the preferred startup field - the routine defined by
+IDL_STARTUP will then be used.
+
+IDL_STARTUP should point to IDL_STARTUP_WINDOWS - other SSW initialization
+is done within ssw_setup_windows which is called by IDL_STARTUP_WINDOWS.
+None of these routines should need modifying - any adjustments to the
+location of SSW and SSWDB should be made in the sswidl.bat file.
+
+
+More detailed information on running SolarSoft under windows can be on the
+Web found under URL:
+
+   http://ydac.mssl.ucl.ac.uk/sswdoc/local_copy/windows_using.html
+
+
+Further information on SolarSoft can be found on the Web under URL:
+
+   http://www.lmsal.com/solarsoft
+
+
+R.D. Bentley, 30 June 2000
