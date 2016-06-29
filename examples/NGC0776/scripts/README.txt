@@ -6,7 +6,7 @@ to test running LZIFU in 1-cpu mode. You should see NGC0776_1_comp.fits under ..
 IDL> lzifu_ngc0776,ncpu = 6
 This time the code will run faster and you should get the same output. 
 
-The final output pre-run on my machine (stored under products/) is gzipped to save space. 
+The final output pre-run on my machine (stored under products/NGC0776_1_comp.fits.gz) is gzipped to save space. 
 
 
 Note that the data (data/lzifu_NGC0776.fits.gz) have been restructured to follow the format required by LZIFU, which is different from the CALIFA format
