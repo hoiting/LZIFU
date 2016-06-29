@@ -1,4 +1,4 @@
-FUNCTION lzifu_linelist_NGC0776,fit_line=fit_line,mask_line = mask_line
+FUNCTION lzifu_linelist_ngc0776,fit_line=fit_line,mask_line = mask_line
 ; This is for NGC0776 
 ; Label and wavelength lists
 ; http://www.mpa-garching.mpg.de/SDSS/DR7/SDSS_line.html

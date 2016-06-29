@@ -1,4 +1,4 @@
-PRO lzifu_NGC0776,_extra=extra
+PRO lzifu_ngc0776,_extra=extra
 ; This is a template
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Start settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 set = { Settings, $
