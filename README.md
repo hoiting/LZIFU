@@ -6,7 +6,7 @@
 
 * README.pdf contains instruction for installing and running LZIFU
 
-* For details about the software, please refer to the corresponding paper (Ho et al. 2016, Ap&SS, ?, ?; paper in press now. journal and page numbers will be updated.) 
+* For details about the software, please refer to the corresponding paper (Ho et al. 2016, Ap&SS, ?, ?; paper in press now. journal and page numbers pending for update.) 
 
 * Note that although LZIFU has already been used and tested by several astronomers, there could still be bugs in the code. This program is freely available, but it comes without any warranty, i.e. use it at your own risk. If you encounter any problems with the code or have any suggestions, I would appreciate you reporting them to me (I-Ting Ho; itho@ifa.hawaii.edu). I will try my best to debug and reply your email in a timely manner. 
 
