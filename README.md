@@ -8,5 +8,5 @@
 
 * For details about the software, please refer to the corresponding paper ([Ho et al. Ap&SS, 361, 280](http://adsabs.harvard.edu/abs/2016Ap%26SS.361..280H))
 
-* Note that although LZIFU has already been used and tested by several astronomers, there could still be bugs in the code. This program is freely available, but it comes without any warranty, i.e. use it at your own risk. If you encounter any problems with the code or have any suggestions, I would appreciate you reporting them to me (I-Ting Ho; itho@ifa.hawaii.edu). I will try my best to debug and reply your email in a timely manner. 
+* Note that although LZIFU has already been used and tested by several astronomers, there could still be bugs in the code. This program is freely available, but it comes without any warranty, i.e. use it at your own risk. If you encounter any problems with the code or have any suggestions, I would appreciate you reporting them to me (I-Ting Ho; iting@mpia.de). I will try my best to debug and reply your email in a timely manner. 
 
