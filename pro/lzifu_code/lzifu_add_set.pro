@@ -2,7 +2,7 @@ FUNCTION lzifu_add_set,set
 	; Add other parameters to set.
 
 	; Version # 
-	set = add_tag(set,'v1.0','LZIFU_VERSION')
+	set = add_tag(set,'v1.1','LZIFU_VERSION')
 
 	; Additional hidden settings
 	if ~tag_exist(set,'PPXF_NAME') then $
