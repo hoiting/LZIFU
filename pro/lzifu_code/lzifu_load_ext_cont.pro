@@ -28,7 +28,6 @@ FUNCTION lzifu_load_ext_cont,set
 		b_continuum      = fltarr(set.xsize,set.ysize,2) + 1
 	endelse
 
-	return,{EXT_CONT_CUBE, $
-			b_continuum       : b_continuum,$
+	return,{b_continuum       : b_continuum,$
 	    	r_continuum       : r_continuum}
 END

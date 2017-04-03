@@ -64,7 +64,10 @@ FUNCTION lzifu_initpar,data,set,linelist,$
 		endelse
 		; red side
   		if finite(r_indline[iline]) then begin
-	  		width= sqrt( (dv/light_speed*linewavez[iline])^2+set.r_resol_sigma^2) /set.r_channel_width
+  			if set.only_1side eq 0 then $
+		  		width = sqrt( (dv/light_speed*linewavez[iline])^2+set.r_resol_sigma^2) /set.r_channel_width $
+		  	else $
+		  		width = sqrt( (dv/light_speed*linewavez[iline])^2+set.resol_sigma^2) /set.r_channel_width 
 			r_left = r_indline[iline] - width GE 0 ? r_indline[iline] - width  : 0
 			r_right= r_indline[iline] + width LT n_elements(data.r_flux_nocnt)-1 ? r_indline[iline] + width : n_elements(data.r_flux_nocnt)-1
 			r = abs(max(data.r_flux_nocnt[r_left: r_right]/data.r_flux_err[r_left: r_right],ind_rmax,/nan))
@@ -207,6 +210,7 @@ FUNCTION lzifu_initpar,data,set,linelist,$
 		sum_amp = fltarr(nline) + 1
 		FOR iline = 0 ,nline-1 DO BEGIN
 			inst_disperse = side[iline] eq 'B' ? set.b_resol_sigma : set.r_resol_sigma
+			if set.only_1side eq 1 then inst_disperse = set.resol_sigma
 			FOR icomp = 2,set.ncomp DO BEGIN
 				; extract dvdisp dvel, and damp
 				void = execute('dvdisp = dvdisp'+ strtrim(icomp,2) + '[i_guess-1]')
@@ -268,7 +272,8 @@ FUNCTION lzifu_initpar,data,set,linelist,$
 				; sigma set to initial vdisp and tie together
 				if side[iline] eq 'B' then inst_disperse = set.b_resol_sigma
 				if side[iline] eq 'R' then inst_disperse = set.r_resol_sigma
-	
+				if set.only_1side eq 1 then inst_disperse = set.resol_sigma
+
 			    parinfo[isoff].value = sqrt( (parinfo[sindx].value/light_speed*linewavez[iline])^2+inst_disperse^2)
 
 				; all linewidth tied to parinfo[3]

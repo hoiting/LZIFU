@@ -191,8 +191,8 @@ FUNCTION lzifu_make_images,fit_list,set
 	
 	for i = 0,n_elements(linelabel)-1 do begin
 		label = linelabel[i]
-		images = add_tag(images,reform(line_images[*,*,i,*]),label)	
-		images = add_tag(images,reform(line_err_images[*,*,i,*]),label+'_ERR')	
+		images = add_tag(images,reform(line_images[*,*,i,*],set.xsize,set.ysize,set.ncomp+1),label)	
+		images = add_tag(images,reform(line_err_images[*,*,i,*],set.xsize,set.ysize,set.ncomp+1),label+'_ERR')
 	endfor
 
 	if set.supply_ext_cont EQ 0 then begin	; stellar ppxf part. only do when external continuum is not provided	          

@@ -107,8 +107,7 @@ FUNCTION lzifu_load_cube,set
 	print,'Finishing loading data.'
 
 	; return data
-	datacube = {datacube, $
-				r_cube        :   r_cube,      $
+	datacube = {r_cube        :   r_cube,      $
 	            r_cube_err    :   r_cube_err,  $
 	            r_cube_bpix   :   r_cube_bpix, $
 	            r_lambda      :   r_lambda,    $
